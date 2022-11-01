@@ -74,16 +74,16 @@ echo "!! Building the dynamic module"
     echo "$version" | tr -d $'\n' > DYN-VERSION
 )
 
-echo "!! Building Lisp code"
-if [[ $target != '' ]]; then
-    echo "!! Will skip building Lisp since this is a cross build"
-    exit 0
-fi
-(
-    cd "$core_root"
-    cask build
-)
-(
-    cd "$PROJECT_ROOT"
-    cask build
-)
+# echo "!! Building Lisp code"
+# if [[ $target != '' ]]; then
+    # echo "!! Will skip building Lisp since this is a cross build"
+    # exit 0
+# fi
+# (
+    # cd "$core_root"
+    # cask build
+# )
+# (
+    # cd "$PROJECT_ROOT"
+    # cask build
+# )
