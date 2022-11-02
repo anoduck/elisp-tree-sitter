@@ -72,6 +72,7 @@ this to nil."
   (pcase system-type
     ('windows-nt "dll")
     ('darwin "dylib")
+    ('berkley-unix "so")
     ((or 'gnu 'gnu/linux 'gnu/kfreebsd) "so")
     ((or 'ms-dos 'cygwin) (error "Unsupported system-type %s" system-type))
     (_ "so")))
